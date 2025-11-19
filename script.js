@@ -20,7 +20,6 @@ document.addEventListener("keydown", (e) => {
 
     if (e.key.toLowerCase() === "f" && !enemyPaused) {
         enemyPaused = true;
-
         setTimeout(() => {
             enemyPaused = false;
         }, 5000);
