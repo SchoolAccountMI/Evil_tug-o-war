@@ -29,11 +29,13 @@ h1 {
     padding: 0 15px;
 }
 
-.hp-box {
-    width: 45%;
-    background: #1F469E;
-    padding: 10px;
-    border-radius: 10px;
+.player-hp {
+    background: #ffea57;
+    green;
+}
+
+.enemy-hp {
+    background: #291DAE;
 }
 
 .hp-label {
