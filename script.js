@@ -66,12 +66,12 @@ function updateUI() {
 ------------------------------ */
 function checkEnd() {
     if (playerHP <= 0) {
-        msgElem.textContent = "You Lost!";
+        msgElem.textContent = "RETIRED!";
         endGame();
     }
 
     if (enemyHP <= 0) {
-        msgElem.textContent = "You Won!";
+        msgElem.textContent = "This is the GREATEST HIGH!";
         endGame();
     }
 }
