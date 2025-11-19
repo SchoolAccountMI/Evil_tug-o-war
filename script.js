@@ -10,17 +10,38 @@ const restartBtn      = document.getElementById("restart");
 const clickBtn        = document.getElementById("click-btn");
 
 let gameRunning = true;
-
 /* ------------------------------
-      ENEMY PRESSURE LOOP
+      ZA WARUDOOO!
+------------------------------ */
+let enemyPaused = false; 
+
+document.addEventListener("keydown", (e) => {
+    if (!gameRunning) return;
+
+    if (e.key.toLowerCase() === "f" && !enemyPaused) {
+        enemyPaused = true;
+
+        setTimeout(() => {
+            enemyPaused = false;
+        }, 5000);
+    }
+});
+/* ------------------------------
+          ROOODOROOOLLAAAA DAAA!
+------------------------------ */
+if (e.key.toLowerCase() === "r") {
+      bar += 65;
+      enemyHP -= 20;
+}
+/* ------------------------------
+      ORA ORA ORA ORA!
 ------------------------------ */
 setInterval(() => {
     if (!gameRunning) return;
-
+      if(!enemyPaused)
     bar -= 0.4;  
     if (bar < 0) bar = 0;
 
-    // If enemy is dominating < 30%
     if (bar < 30) {
         playerHP -= 0.4;
         if (playerHP < 0) playerHP = 0;
@@ -32,7 +53,7 @@ setInterval(() => {
 
 
 /* ------------------------------
-      PLAYER CLICK = PUSH BAR
+      MUDA MUDA!
 ------------------------------ */
 clickBtn.addEventListener("click", () => {
     if (!gameRunning) return;
