@@ -18,20 +18,24 @@ let enemyPaused = false;
 document.addEventListener("keydown", (e) => {
     if (!gameRunning) return;
 
-    if (e.key.toLowerCase() === "f" && !enemyPaused) {
+    const key = e.key.toLowerCase();
+
+    // Za Warudo!
+    if (key === "f" && !enemyPaused) {
         enemyPaused = true;
-        setTimeout(() => {
-            enemyPaused = false;
-        }, 5000);
+        setTimeout(() => { enemyPaused = false; }, 5000);
+    }
+
+    // Rodo rolla da!
+    if (key === "r") {
+        bar += 65; 
+        enemyHP -= 20; 
+        if (enemyHP < 0) enemyHP = 0;
+
+        updateUI();
+        checkEnd();
     }
 });
-/* ------------------------------
-          ROOODOROOOLLAAAA DAAA!
------------------------------- */
-if (e.key.toLowerCase() === "r") {
-      bar += 65;
-      enemyHP -= 20;
-}
 /* ------------------------------
       ORA ORA ORA ORA!
 ------------------------------ */
